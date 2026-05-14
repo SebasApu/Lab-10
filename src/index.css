@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+/* ══════════════════════════════════════════════
+   CSS VARIABLES — atraviesan el Shadow DOM
+   Podés personalizar cada instancia desde aquí
+   ══════════════════════════════════════════════ */
+
+cartel-acompana {
+  /* Estas variables se filtran al Shadow DOM del componente */
+  --cartel-bg: #C8960A;
+  --color-morado: #7B2D8B;
+  --color-rojo: #E63946;
+  --color-teal: #2EC4B6;
+}
+
+letrero-direcciones {
+  /* Personalizá el letrero cambiando estas variables */
+  --letrero-bg: #1a3a5c;
+  --letrero-logo-bg: #0f2540;
+  --letrero-color: #fff;
+}
+
+/* ══════════════════════════════════════════════
+   CSS PARTS — estilar partes internas desde fuera
+   usando ::part(nombre)
+   ══════════════════════════════════════════════ */
+
+/* Ejemplo: cambiar el fondo del footer del cartel */
+/* cartel-acompana::part(footer) {
+  background: rgba(0,0,0,0.3);
+} */
+
+/* Ejemplo: cambiar el color del logo del letrero */
+/* letrero-direcciones::part(logo) {
+  background-color: #1a5276;
+} */
+
+/* Ejemplo: agregarle borde a las filas del letrero */
+/* letrero-direcciones::part(filas) {
+  border: 2px solid gold;
+} */

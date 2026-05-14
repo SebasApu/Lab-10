@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components - UCR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="./index.js"></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CARTEL 1: La Sede Te Acompaña
+       Usa SLOTS NOMBRADOS para pasar contenido
+       ═══════════════════════════════════════════ -->
+  <cartel-acompana sede="SG" sede-nombre="Sede de Guanacaste">
+
+    <!-- Slots del título -->
+    <span slot="titulo1">LA SEDE</span>
+    <span slot="titulo2">TE</span>
+    <span slot="titulo3">ACOMPAÑA</span>
+
+    <!-- Slots del subtítulo -->
+    <p slot="subtitulo1">El respeto no se negocia</p>
+    <p slot="subtitulo2">¡Pará ya de acosar!</p>
+
+    <!-- Slot del texto QR -->
+    <span slot="qr-texto">Si necesitas ayuda, escánea este QR</span>
+
+    <!-- Slot para imagen QR (si tenés una imagen real) -->
+    <!-- <img slot="qr" src="img/qr-code.png" alt="Código QR"> -->
+
+    <!-- Slots de personas -->
+    <img slot="persona1" src="img/cr.png" alt="Estudiante">
+    <img slot="persona2" src="img/nicolaa.png" alt="Estudiante mujer">
+
+  </cartel-acompana>
+
+
+  <!-- ═══════════════════════════════════════════
+       CARTEL 2: Letrero de direcciones UCR
+       Usa SLOT DEFAULT para las filas
+       ═══════════════════════════════════════════ -->
+  <letrero-direcciones titulo="UCR">
+
+    <!-- Filas pasadas via slot default (sin nombre) -->
+    <div class="letrero-fila">
+      <span>Aulas 5, 6, 7</span>
+      <span>→</span>
+    </div>
+    <div class="letrero-fila">
+      <span>Apoyo Informático</span>
+      <span>→</span>
+    </div>
+    <div class="letrero-fila">
+      <span>Servidores</span>
+      <span>→</span>
+    </div>
+    <div class="letrero-fila">
+      <span>Laboratorio 1 y 2</span>
+      <span>→</span>
+    </div>
+    <div class="letrero-fila">
+      <span>Coordinación<br>Informática Empresarial</span>
+      <span>→</span>
+    </div>
+
+  </letrero-direcciones>
+
+</body>
+</html>
